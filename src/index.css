@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Inclusive+Sans:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,900&display=swap");
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn-img-slide {
+  @apply hover:bg-primary bg-neutraexLight font-black text-2xl drop-shadow-xl top-1/3 h-12 w-12 text-neutraDark;
+}
+.btn-round {
+  @apply transition-all duration-500  flex justify-center items-center rounded-full py-2 px-2;
+}
+.disabled {
+  @apply bg-gray-400   hover:bg-gray-400;
+}
+
+body {
+  /* color: #cdd3c3; */
+  font-family: "Inria Serif", serif;
+  font-size: 1.2rem;
+  /* color: #f6f7f4 !important;
+  background-color: #363636 !important; */
+}
+.dark_Mode {
+  color: #cdd3c3 !important;
+  background-color: #363a37 !important;
+}
+.leaflet-container {
+  height: 100vh;
+  width: 100%;
+}
+.leaflet-popup-content-wrapper {
+  background-color: #363636;
+  height: max-content;
+  border-left: #99c24d solid 6px;
+  border-radius: 5px;
+}
+.leaflet-popup-content {
+  color: #99c24d;
+  font-size: 1.1rem;
+  width: 100%;
+}
+.leaflet-popup-tip {
+  background-color: #363636;
+}
+.leaflet-popup-close-button span {
+  color: #cdd3c3;
+}
+.active {
+  background-color: #99c24d;
+  color: #f6f7f4;
+}
+.active > svg > path {
+  fill: #363636 !important;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt-custom {
+    /* margin-top: -36rem; */
+    transform: translateY(-20rem);
+  }
+}
+.ht-custom {
+  height: 119%;
+}
+.w-custom {
+  width: 125%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+.shapes-5 {
+  width: 40px;
+  height: 40px;
+  color: #99c24d;
+  background: linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0);
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  animation: sh5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes sh5 {
+  0% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  }
+  33% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    width: 60px;
+    height: 60px;
+  }
+  66% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+    width: 60px;
+    height: 60px;
+  }
+  100% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+  }
+}
+
+.sub-image::before {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* background-color: #615d5d; */
+  transition: opacity 500ms;
+  animation: onOff 2s ease infinite;
+}
+.sub-image.sub-image-loaded::before {
+  content: none;
+}
+@keyframes onOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
