@@ -1187,64 +1187,6 @@
   ],
   "favorites": [
     {
-      "id": "b91g2",
-      "city": "Santorini",
-      "country": "Greece",
-      "flag": "🇬🇷",
-      "position": {
-        "lat": 36.3932,
-        "lng": 25.4615
-      },
-      "img": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2FudG9yaW5pfGVufDB8fDB8fHww",
-      "subimages": [
-        {
-          "id": "2a",
-          "url": "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2FudG9yaW5pfGVufDB8fDB8fHww"
-        },
-        {
-          "id": "2b",
-          "url": "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U2FudG9yaW5pfGVufDB8fDB8fHww"
-        },
-        {
-          "id": "2c",
-          "url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U2FudG9yaW5pfGVufDB8fDB8fHww"
-        },
-        {
-          "id": "2d",
-          "url": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8U2FudG9yaW5pfGVufDB8fDB8fHww"
-        },
-        {
-          "id": "2e",
-          "url": "https://images.unsplash.com/photo-1628246317828-18bd3bf12593?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fFNhbnRvcmluaXxlbnwwfHwwfHx8MA%3D%3D"
-        },
-        {
-          "id": "2l",
-          "url": "https://images.unsplash.com/photo-1571406252241-db0280bd36cd?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFNhbnRvcmluaXxlbnwwfHwwfHx8MA%3D%3D"
-        },
-        {
-          "id": "2g",
-          "url": "https://images.unsplash.com/photo-1523568129082-a8d6c095638e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fFNhbnRvcmluaXxlbnwwfHwwfHx8MA%3D%3D"
-        },
-        {
-          "id": "2h",
-          "url": "https://images.unsplash.com/photo-1604145195376-e2c8195adf29?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFNhbnRvcmluaXxlbnwwfHwwfHx8MA%3D%3D"
-        },
-        {
-          "id": "2w",
-          "url": "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fFNhbnRvcmluaXxlbnwwfHwwfHx8MA%3D%3D"
-        },
-        {
-          "id": "2y",
-          "url": "https://images.unsplash.com/photo-1569581495523-466822f51990?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fFNhbnRvcmluaXxlbnwwfHwwfHx8MA%3D%3D"
-        }
-      ],
-      "isAddedToFavorites": true,
-      "category": "beach",
-      "numberOfVisits": 3,
-      "amountNeeded": 2500,
-      "info": "Santorini is a stunning Greek island known for its white buildings, blue domes, and breathtaking sunsets. Explore the rich history and indulge in delicious Mediterranean cuisine."
-    },
-    {
       "id": "h29o8",
       "city": "Gold Coast",
       "country": "Australia",

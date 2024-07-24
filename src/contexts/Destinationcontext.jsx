@@ -42,7 +42,6 @@ function reducerCallback(state, action) {
         ...state,
         isFavOpen: !state.isFavOpen,
       };
-
     case "data/loading":
       return { ...state, isLoading: true };
     case "destination/Load":
@@ -81,7 +80,7 @@ function reducerCallback(state, action) {
             ? state.Locations.find((des) => des.id === action.payLoad)
             : state.selectedDestination,
         selectedDestinationId:
-          action.payLoad === state.selectedDestinationIdid
+          action.payLoad === state.selectedDestinationId
             ? null
             : action.payLoad,
       };
@@ -89,15 +88,12 @@ function reducerCallback(state, action) {
       return {
         ...state,
         Locations: [...state.Locations, action.payLoad],
-        // state.Locations.map((local) =>
-        // local?.city !== action.payLoad?.city ? action.payLoad : local
-        // ),
-        LocationsLength: state.LocationsLength++,
+        LocationsLength: state.LocationsLength + 1,
       };
     case "destination/length":
       return {
         ...state,
-        LocationsLength: state.LocationsLength++,
+        LocationsLength: state.LocationsLength + 1,
       };
     case "destination/updateResultPerPage":
       return {
@@ -105,9 +101,11 @@ function reducerCallback(state, action) {
         resultPerpage: action.payLoad,
       };
     default:
+      console.error(`Unknown action ${action.type}`);
       throw new Error(`Unknown action ${action.type}`);
   }
 }
+
 const DestinationContext = createContext();
 function LocationProvider({ children }) {
   const [
@@ -137,11 +135,11 @@ function LocationProvider({ children }) {
   }
   function handleToggleFavorite(destination) {
     handleSelectedDestination(destination.id);
-    const updatedObject = {
-      isAddedToFavorites: destination.isAddedToFavorites,
-    };
-    addToFavorite(destination);
-    updateAddtoFavorite(destination.id, updatedObject);
+    // const updatedObject = {
+    //   isAddedToFavorites: destination.isAddedToFavorites,
+    // };
+    // addToFavorite(destination);
+    // updateAddtoFavorite(destination.id, updatedObject);
     dispatch({ type: "destination/adding", payLoad: destination });
   }
   async function unAddFavorite(destinationId) {
@@ -172,6 +170,7 @@ function LocationProvider({ children }) {
     },
     [LocationsLength]
   );
+  /*
   useEffect(() => {
     dispatch({ type: "data/loading" });
 
@@ -184,6 +183,7 @@ function LocationProvider({ children }) {
     if (!favorite.length) return;
     fechtFavorite();
   }, [favorite.length]);
+  */
 
   return (
     <DestinationContext.Provider
@@ -217,34 +217,34 @@ function useDestination() {
   return destination;
 }
 
-async function updateAddtoFavorite(id, updatedObject) {
-  try {
-    await fetch(`${API_URL}/locations/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
+// async function updateAddtoFavorite(id, updatedObject) {
+//   try {
+//     await fetch(`${API_URL}/locations/${id}`, {
+//       method: "PATCH",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
 
-      body: JSON.stringify(updatedObject),
-    });
-    // return await res.json();
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-async function addToFavorite(destination) {
-  try {
-    await fetch(`${API_URL}/favorites`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+//       body: JSON.stringify(updatedObject),
+//     });
+//     // return await res.json();
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+// async function addToFavorite(destination) {
+//   try {
+//     await fetch(`${API_URL}/favorites`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
 
-      body: JSON.stringify(destination),
-    });
-    // return await res.json();
-  } catch (error) {
-    console.log(error.message);
-  }
-}
+//       body: JSON.stringify(destination),
+//     });
+//     // return await res.json();
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
 export { LocationProvider, useDestination };
