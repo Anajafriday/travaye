@@ -155,13 +155,13 @@ function HomeFooter() {
                 </div>
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-700 dark:text-white md:text-gray-100">
+                <h2 className="text-lg font-bold  dark:text-white text-gray-100">
                   Sign Up For <span className="text-primary">Travel</span>{" "}
                   Updates
                 </h2>
                 <div className="flex items-center justify-start pb-6 md:py-5">
                   <form>
-                    <div className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                    <div className="flex flex-col md:p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                       <input
                         className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-800 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent"
                         type="text"

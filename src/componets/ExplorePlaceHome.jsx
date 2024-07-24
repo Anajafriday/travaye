@@ -1,99 +1,126 @@
 import { motion } from "framer-motion";
+
+import React from "react";
+import { BentoGrid, BentoGridItem } from "../componets/bento-grid";
+
+function ExplorePLace() {
+  return (
+    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+      {items.map((item, i) => (
+        <BentoGridItem
+          key={i}
+          title={item.title}
+          header={item.header}
+          className={item.className}
+        />
+      ))}
+    </BentoGrid>
+  );
+}
+const Skeleton = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+);
+const items = [
+  {
+    title: "Bora Bora, French",
+    header: (
+      <motion.img
+        initial={{ scale: 0.5 }}
+        animate={{ scale: 0.5 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        src="https://images.unsplash.com/photo-1500930287596-c1ecaa373bb2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEJvcmElMjBCb3JhJTJDJTIwRnJlbmNofGVufDB8fDB8fHww"
+        loading="lazy"
+        height="300px"
+        width="300px"
+        alt="travle"
+        className=" w-full h-full  oobject-center  rounded bg-gray-400"
+      />
+    ) || <Skeleton />,
+    className: "md:col-span-2  ",
+  },
+  {
+    title: "Alaska, USA",
+    header: (
+      <motion.img
+        initial={{ scale: 0.5 }}
+        animate={{ scale: 0.5 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        src="https://images.unsplash.com/photo-1514272272587-d4fae170976f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QWxhc2thJTJDJTIwVVNBfGVufDB8fDB8fHww"
+        loading="lazy"
+        height="300px"
+        width="300px"
+        alt="travle"
+        className=" w-full h-full object-center  rounded bg-gray-400"
+      />
+    ) || <Skeleton />,
+    className: "md:col-span-1 ",
+  },
+
+  {
+    title: "Cape Town, S.Africa",
+    header: (
+      <motion.img
+        initial={{ scale: 0.5 }}
+        animate={{ scale: 0.5 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        src="https://plus.unsplash.com/premium_photo-1697730039730-102912a08e70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2FwZSUyMFRvd24lMkMlMjBTLkFmcmljYXxlbnwwfHwwfHx8MA%3D%3D"
+        loading="lazy"
+        height="300px"
+        width="300px"
+        alt="travle"
+        className=" w-full h-full  object-center  rounded bg-gray-400"
+      />
+    ) || <Skeleton />,
+    className: "md:col-span-1",
+  },
+  {
+    title: "Marrakech, Morocco",
+    header: (
+      <motion.img
+        initial={{ scale: 0.5 }}
+        animate={{ scale: 0.5 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 1 }}
+        src="https://plus.unsplash.com/premium_photo-1673415819362-c2ca640bfafe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWFycmFrZWNoJTIwbW9yb2Njb3xlbnwwfHwwfHx8MA%3D%3D"
+        loading="lazy"
+        height="300px"
+        width="300px"
+        alt="travle"
+        className=" w-full  h-full  object-center  rounded bg-gray-400"
+      />
+    ) || <Skeleton />,
+    className: "md:col-span-1  ",
+  },
+  {
+    title: "Lagos, Nigeria",
+    header: (
+      <motion.img
+        initial={{ scale: 0.5 }}
+        animate={{ scale: 0.5 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 1 }}
+        src="https://images.unsplash.com/photo-1626882920560-80b382db2bc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fExhZ29zJTJDJTIwTmlnZXJpYSUyMGxhbmRtYXJrfGVufDB8fDB8fHww"
+        loading="lazy"
+        height="300px"
+        width="300px"
+        alt="travle"
+        className=" w-full  h-full  object-center  rounded bg-gray-400"
+      />
+    ) || <Skeleton />,
+    className: "md:col-span-1  ",
+  },
+];
+
 function ExplorePlaceHome() {
   return (
     <div className="my-4">
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3  grid-cols-1  md:grid-cols-2  gap-5 w-full mx-auto mt-4 xl:-mb-56">
-        <h2 className="text-center font-[700] text-neutraDark text-2xl  font-inriaSerif my-4 xl:col-span-3">
-          Amazing place to Explore
-        </h2>
-        <div className=" w-full items-stretch lg:row-span-2 lg:row-start-2 lg:row-end-2 lg:col-span-3 relative  lg:-translate-y-96 lg:h-96 h-72    ">
-          <motion.img
-            initial={{ scale: 0.5 }}
-            animate={{ scale: 0.5 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 1 }}
-            src="https://plus.unsplash.com/premium_photo-1673415819362-c2ca640bfafe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWFycmFrZWNoJTIwbW9yb2Njb3xlbnwwfHwwfHx8MA%3D%3D"
-            alt="travle"
-            className=" w-full ht-custom   object-cover rounded"
-          />
-          <div className="bg-primary py-2 px-4 font-semibold rounded-lg absolute top-1 right-1">
-            Marrakech, Morocco
-          </div>
-        </div>
-        <div className="lg:-col-span-1 w-full  lg:w-80 flex flex-col  justify-center">
-          <div className=" w-full relative h-32 lg:mb-12">
-            <motion.img
-              initial={{ scale: 0.5 }}
-              animate={{ scale: 0.5 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              src="https://plus.unsplash.com/premium_photo-1697730039730-102912a08e70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2FwZSUyMFRvd24lMkMlMjBTLkFmcmljYXxlbnwwfHwwfHx8MA%3D%3D"
-              alt="travle"
-              className=" w-full   h-56 object-cover rounded"
-            />
-            <div className="bg-primary py-2 px-4 font-semibold rounded-lg absolute top-1 right-1">
-              Cape Town, S.Africa{" "}
-            </div>
-          </div>
-          <div className=" w-full h-32 relative  lg:my-14 self-start">
-            <motion.img
-              initial={{ scale: 0.5 }}
-              animate={{ scale: 0.5 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              src="https://images.unsplash.com/photo-1514272272587-d4fae170976f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QWxhc2thJTJDJTIwVVNBfGVufDB8fDB8fHww"
-              alt="travle"
-              className=" w-full h-full object-cover rounded"
-            />
-            <div className="bg-primary py-2 px-4 font-semibold rounded-lg absolute top-1 right-1">
-              Alaska, USA{" "}
-            </div>
-          </div>
-          <div className="w-full  h-32 relative lg:-mt-10">
-            <motion.img
-              initial={{ scale: 0.5 }}
-              animate={{ scale: 0.5 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              src="https://images.unsplash.com/photo-1500930287596-c1ecaa373bb2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEJvcmElMjBCb3JhJTJDJTIwRnJlbmNofGVufDB8fDB8fHww"
-              alt="travle"
-              className=" w-full h-56 object-cover rounded"
-            />
-            <div className="bg-primary py-2 px-4 font-semibold rounded-lg absolute top-1 right-1">
-              Bora Bora, French{" "}
-            </div>
-          </div>
-        </div>
-        {/** stanalone */}
-        <div className="relative  w-full  transform mt-custom lg:col-span-2">
-          <motion.img
-            initial={{ scale: 0.5 }}
-            animate={{ scale: 0.5 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            src="https://images.unsplash.com/photo-1706186742202-1603fc51872c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8VmFyYW5hc2klMkMlMjBJbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
-            alt="travle"
-            className=" w-full h-64 object-cover rounded"
-          />
-          <div className="bg-primary py-2 px-4 font-semibold rounded-lg absolute top-1 right-1">
-            Varanasi, India{" "}
-          </div>
-        </div>
-        <div className="  w-18 relative  col-span-2   mt-custom">
-          <motion.img
-            initial={{ scale: 0.5 }}
-            animate={{ scale: 0.5 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            src="https://images.unsplash.com/photo-1626882920560-80b382db2bc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fExhZ29zJTJDJTIwTmlnZXJpYSUyMGxhbmRtYXJrfGVufDB8fDB8fHww"
-            alt="travle"
-            className=" w-full h-64 object-cover rounded"
-          />
-          <div className="bg-primary py-2 px-4 font-semibold rounded-lg absolute top-1 right-1">
-            Lagos, Nigeria{" "}
-          </div>
-        </div>
-      </div>
+      <h2 className="text-center font-[700] text-neutraDark text-2xl  font-inriaSerif my-4 xl:col-span-3">
+        Amazing place to Explore
+      </h2>
+      <ExplorePLace />
     </div>
   );
 }

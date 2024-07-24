@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import OptimizeImage from "../Optimzer/OptimizeImage";
 
-function FeatureDestination() {
+function FeatureDestination({ index }) {
   // const fade = useRef();
   // useEffect(() => {
   //   Observer(fade.current, () => {
@@ -17,16 +18,16 @@ function FeatureDestination() {
         // ref={fade}
       >
         <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: "-100%" }}
-          whileInView={{ x: "0%" }}
-          transition={{ duration: 1 }}
-          className="md:w-1/2 md:h-96 h-72 w-full  "
+          initial={index !== 0 && { x: "-100%" }}
+          animate={index !== 0 && { x: "-100%" }}
+          whileInView={index !== 0 && { x: "0%" }}
+          transition={index !== 0 && { duration: 1 }}
+          className="md:w-1/2 md:h-96 h-72 mb-12 md:mb-0 w-full  "
         >
-          <img
-            src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="travle"
-            className=" w-full h-full object-cover rounded"
+          <OptimizeImage
+            largeImage="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&w=600"
+            smallImage="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&w=50"
+            className=" w-full h-full object-cover rounded bg-gray-400"
           />
           <h3 className="text-center text-neutraDark font-inriaSerif font-bold text-xl my-5">
             Paradise Island Getaway
@@ -34,16 +35,16 @@ function FeatureDestination() {
         </motion.div>
         <motion.div
           // initial={{ opacity: 0 }}
-          initial={{ x: "100%" }}
-          animate={{ x: "100%" }}
-          whileInView={{ x: "0%" }}
-          transition={{ duration: 1 }}
+          initial={index !== 0 && { x: "100%" }}
+          animate={index !== 0 && { x: "100%" }}
+          whileInView={index !== 0 && { x: "0%" }}
+          transition={index !== 0 && { duration: 1 }}
           className="md:w-1/2 md:h-96 h-72 w-full"
         >
-          <img
-            src="https://images.pexels.com/photos/23344538/pexels-photo-23344538/free-photo-of-lights-on-building-in-tokyo-at-night.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="travle"
-            className=" w-full h-full object-cover  object-center rounded "
+          <OptimizeImage
+            largeImage="https://images.pexels.com/photos/23344538/pexels-photo-23344538/free-photo-of-lights-on-building-in-tokyo-at-night.jpeg?auto=compress&cs=tinysrgb&w=600"
+            smallImage="https://images.pexels.com/photos/23344538/pexels-photo-23344538/free-photo-of-lights-on-building-in-tokyo-at-night.jpeg?auto=compress&cs=tinysrgb&w=50"
+            className=" w-full h-full object-cover  object-center rounded  bg-gray-400"
           />
           <h3 className="text-center text-neutraDark font-inriaSerif font-bold text-xl my-5">
             Urban Adventure in Tokyo

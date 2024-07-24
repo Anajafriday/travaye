@@ -22,6 +22,7 @@ const tail = {
       },
       height: {
         119: "119%",
+        inherit: "inherit",
       },
     },
   },

@@ -1,6 +1,6 @@
 function Blog() {
   return (
-    <section className="bg-white dark:bg-gray-900  py-24 -mt-60 mb-32">
+    <section className="bg-white dark:bg-gray-900  py-24 md:-mt-60 md:mb-32">
       <div className="container px-6  mx-auto">
         <div className="text-center">
           <h3 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
@@ -19,6 +19,9 @@ function Blog() {
               <img
                 className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
                 src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=600"
+                loading="lazy"
+                height="300px"
+                width="300px"
                 alt="blog-images"
               />
 
@@ -26,6 +29,9 @@ function Blog() {
                 <img
                   className="object-cover object-center w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  loading="lazy"
+                  height="300px"
+                  width="300px"
                   alt="travel-vblogers"
                 />
 
@@ -65,6 +71,9 @@ function Blog() {
               <img
                 className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
                 src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=600"
+                loading="lazy"
+                height="300px"
+                width="300px"
                 alt="blog-images"
               />
 
@@ -72,6 +81,9 @@ function Blog() {
                 <img
                   className="object-cover object-center w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                  loading="lazy"
+                  height="300px"
+                  width="300px"
                   alt="travel-vblogers"
                 />
 
@@ -111,6 +123,9 @@ function Blog() {
               <img
                 className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
                 src="https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=600"
+                loading="lazy"
+                height="300px"
+                width="300px"
                 alt="blog-images"
               />
 
@@ -118,6 +133,9 @@ function Blog() {
                 <img
                   className="object-cover object-center w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                  loading="lazy"
+                  height="300px"
+                  width="300px"
                   alt="travel-vblogers"
                 />
 
