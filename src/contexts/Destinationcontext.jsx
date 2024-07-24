@@ -105,7 +105,7 @@ function reducerCallback(state, action) {
         resultPerpage: action.payLoad,
       };
     default:
-      throw new Error("Unknown action");
+      throw new Error(`Unknown action ${action.type}`);
   }
 }
 const DestinationContext = createContext();
