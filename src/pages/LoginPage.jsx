@@ -24,7 +24,7 @@ function LoginForm() {
       <form onSubmit={handleSubmit}>
         <div>
           <label
-            for="email"
+            htmlFor="email"
             className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
           >
             Email Address
@@ -43,7 +43,7 @@ function LoginForm() {
         <div className="mt-6">
           <div className="flex justify-between mb-2">
             <label
-              for="password"
+              htmlFor="password"
               className="text-sm text-gray-600 dark:text-gray-200"
             >
               Password
