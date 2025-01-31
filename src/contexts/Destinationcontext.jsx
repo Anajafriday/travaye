@@ -35,7 +35,6 @@ function reducerCallback(state, action) {
         isFavOpen: false,
       };
     case "tab/open":
-      console.log("tab/open");
 
       return {
         ...state,
@@ -49,11 +48,9 @@ function reducerCallback(state, action) {
         isFavOpen: !state.isFavOpen,
       };
     case "data/loading":
-      console.log("data/Loadding");
 
       return { ...state, isLoading: true };
     case "destination/Load":
-      console.log("destination/load");
 
       return {
         ...state,
@@ -62,7 +59,6 @@ function reducerCallback(state, action) {
         LocationsLength: action.payLoad.length,
       };
     case "destination/adding":
-      console.log("destination/adding");
 
       return {
         ...state,
@@ -78,18 +74,15 @@ function reducerCallback(state, action) {
           : state.favorite.filter((fav) => fav?.id !== action.payLoad.id),
       };
     case "destination/favorite":
-      console.log("destination/favorite");
 
       return { ...state, favorite: action.payLoad };
     case "destination/deleteFavorite":
-      console.log("destination/deleteFavorite");
 
       return {
         ...state,
         favorite: state.favorite.filter((fav) => fav.id !== action.payLoad),
       };
     case "destination/selected":
-      console.log("destination/selected");
       return {
         ...state,
         selectedDestination:
@@ -102,7 +95,6 @@ function reducerCallback(state, action) {
             : action.payLoad,
       };
     case "destination/added":
-      console.log("destination/added");
       return {
         ...state,
         Locations: [...state.Locations, action.payLoad],
