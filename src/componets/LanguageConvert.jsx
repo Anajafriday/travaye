@@ -24,7 +24,7 @@ function LanguageConvert({ classes = "border-primary", children }) {
     </button>
   );
 }
-LanguageConvert.prototype = {
+LanguageConvert.propTypes = {
   classes: Proptypes.string,
 };
 export default LanguageConvert;

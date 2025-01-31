@@ -25,26 +25,36 @@ const initValue = {
   resultPerpage: 6,
 };
 function reducerCallback(state, action) {
+  // console.log(action);
   switch (action.type) {
     case "closed/tab":
+      // console.log("closed/tab");
       return {
         ...state,
         isOpen: false,
         isFavOpen: false,
       };
     case "tab/open":
+      // console.log("tab/open");
+
       return {
         ...state,
         isOpen: true,
       };
     case "fav/open":
+      // console.log("fav/open");
+
       return {
         ...state,
         isFavOpen: !state.isFavOpen,
       };
     case "data/loading":
+      // console.log("data/Loadding");
+
       return { ...state, isLoading: true };
     case "destination/Load":
+      // console.log("destination/load");
+
       return {
         ...state,
         isLoading: false,
@@ -52,6 +62,8 @@ function reducerCallback(state, action) {
         LocationsLength: action.payLoad.length,
       };
     case "destination/adding":
+      // console.log("destination/adding");
+
       return {
         ...state,
         Locations: state.Locations.map((local) =>
@@ -66,13 +78,18 @@ function reducerCallback(state, action) {
           : state.favorite.filter((fav) => fav?.id !== action.payLoad.id),
       };
     case "destination/favorite":
+      // console.log("destination/favorite");
+
       return { ...state, favorite: action.payLoad };
     case "destination/deleteFavorite":
+      // console.log("destination/deleteFavorite");
+
       return {
         ...state,
         favorite: state.favorite.filter((fav) => fav.id !== action.payLoad),
       };
     case "destination/selected":
+      // console.log("destination/selected");
       return {
         ...state,
         selectedDestination:
@@ -85,6 +102,7 @@ function reducerCallback(state, action) {
             : action.payLoad,
       };
     case "destination/added":
+      // console.log("destination/added");
       return {
         ...state,
         Locations: [...state.Locations, action.payLoad],
@@ -177,7 +195,7 @@ function LocationProvider({ children }) {
     async function fechtFavorite() {
       const res = await fetch(`${API_URL}/favorites`);
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       dispatch({ type: "destination/favorite", payLoad: data });
     }
     if (!favorite.length) return;
@@ -229,7 +247,7 @@ function useDestination() {
 //     });
 //     // return await res.json();
 //   } catch (error) {
-//     console.log(error.message);
+// console.log(error.message);
 //   }
 // }
 // async function addToFavorite(destination) {
@@ -244,7 +262,7 @@ function useDestination() {
 //     });
 //     // return await res.json();
 //   } catch (error) {
-//     console.log(error.message);
+// console.log(error.message);
 //   }
 // }
 export { LocationProvider, useDestination };

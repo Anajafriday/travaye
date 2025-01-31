@@ -149,7 +149,7 @@ function HomeFooter() {
                   example@email.com
                 </span>
                 <div className="text-white mt-12">
-                  <LanguageConvert py="py-3" px="px-5">
+                  <LanguageConvert classes="py-3 px-5">
                     English
                   </LanguageConvert>
                 </div>

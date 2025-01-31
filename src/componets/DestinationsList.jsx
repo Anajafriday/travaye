@@ -18,7 +18,7 @@ function DestinationsList({ destination }) {
         {
           <img
             src={destination.img}
-            alt="eng"
+            alt={destination.city}
             className="w-full h-full rounded-t-lg"
           />
         }
